@@ -1,0 +1,141 @@
+Loading checkpoint...
+
+Total number of weights: 1071
+
+Weight prefixes and counts:
+  layers: 360 weights
+  mm_embeddings: 220 weights
+  mm_whisper_embeddings: 489 weights
+  norm: 1 weights
+  output: 1 weights
+
+
+=== layers weights (360 total) ===
+  layers.0.attention.wk.weight: torch.Size([1024, 5120])
+  layers.0.attention.wo.weight: torch.Size([5120, 4096])
+  layers.0.attention.wq.weight: torch.Size([4096, 5120])
+  layers.0.attention.wv.weight: torch.Size([1024, 5120])
+  layers.0.attention_norm.weight: torch.Size([5120])
+  layers.0.feed_forward.w1.weight: torch.Size([32768, 5120])
+  layers.0.feed_forward.w2.weight: torch.Size([5120, 32768])
+  layers.0.feed_forward.w3.weight: torch.Size([32768, 5120])
+  layers.0.ffn_norm.weight: torch.Size([5120])
+  layers.1.attention.wk.weight: torch.Size([1024, 5120])
+  layers.1.attention.wo.weight: torch.Size([5120, 4096])
+  layers.1.attention.wq.weight: torch.Size([4096, 5120])
+  layers.1.attention.wv.weight: torch.Size([1024, 5120])
+  layers.1.attention_norm.weight: torch.Size([5120])
+  layers.1.feed_forward.w1.weight: torch.Size([32768, 5120])
+  layers.1.feed_forward.w2.weight: torch.Size([5120, 32768])
+  layers.1.feed_forward.w3.weight: torch.Size([32768, 5120])
+  layers.1.ffn_norm.weight: torch.Size([5120])
+  layers.10.attention.wk.weight: torch.Size([1024, 5120])
+  layers.10.attention.wo.weight: torch.Size([5120, 4096])
+  ... and 340 more
+
+
+=== mm_embeddings weights (220 total) ===
+  mm_embeddings.vision_encoder.ln_pre.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.patch_conv.weight: torch.Size([1024, 3, 14, 14])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wk.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wo.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wq.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wv.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w1.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w2.weight: torch.Size([1024, 4096])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w3.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.ffn_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wk.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wo.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wq.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wv.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.feed_forward.w1.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.feed_forward.w2.weight: torch.Size([1024, 4096])
+  mm_embeddings.vision_encoder.transformer.layers.1.feed_forward.w3.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.ffn_norm.weight: torch.Size([1024])
+  ... and 200 more
+
+
+=== mm_whisper_embeddings weights (489 total) ===
+  mm_whisper_embeddings.audio_language_projection.0.weight: torch.Size([5120, 5120])
+  mm_whisper_embeddings.audio_language_projection.2.weight: torch.Size([5120, 5120])
+  mm_whisper_embeddings.tok_embeddings.weight: torch.Size([131072, 5120])
+  mm_whisper_embeddings.whisper_encoder.conv_layers.0.bias: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.conv_layers.0.weight: torch.Size([1280, 128, 3])
+  mm_whisper_embeddings.whisper_encoder.conv_layers.1.bias: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.conv_layers.1.weight: torch.Size([1280, 1280, 3])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention.wk.weight: torch.Size([1280, 1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention.wo.bias: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention.wo.weight: torch.Size([1280, 1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention.wq.bias: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention.wq.weight: torch.Size([1280, 1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention.wv.bias: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention.wv.weight: torch.Size([1280, 1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention_norm.bias: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.attention_norm.weight: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.feed_forward.w1.bias: torch.Size([5120])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.feed_forward.w1.weight: torch.Size([5120, 1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.feed_forward.w2.bias: torch.Size([1280])
+  mm_whisper_embeddings.whisper_encoder.transformer.layers.0.feed_forward.w2.weight: torch.Size([1280, 5120])
+  ... and 469 more
+
+
+=== norm weights (1 total) ===
+  norm.weight: torch.Size([5120])
+
+
+=== output weights (1 total) ===
+  output.weight: torch.Size([131072, 5120])
+
+
+=== Looking for vision-related weights ===
+Found 220 vision-related weights:
+  mm_embeddings.vision_encoder.ln_pre.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.patch_conv.weight: torch.Size([1024, 3, 14, 14])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wk.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wo.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wq.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wv.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w1.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w2.weight: torch.Size([1024, 4096])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w3.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.ffn_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wk.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wo.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wq.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention.wv.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.attention_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.feed_forward.w1.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.feed_forward.w2.weight: torch.Size([1024, 4096])
+  mm_embeddings.vision_encoder.transformer.layers.1.feed_forward.w3.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.1.ffn_norm.weight: torch.Size([1024])
+
+
+=== Looking for mm_embeddings ===
+Found 220 mm_embeddings weights:
+  mm_embeddings.vision_encoder.ln_pre.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.patch_conv.weight: torch.Size([1024, 3, 14, 14])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wk.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wo.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wq.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention.wv.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.attention_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w1.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w2.weight: torch.Size([1024, 4096])
+  mm_embeddings.vision_encoder.transformer.layers.0.feed_forward.w3.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.0.ffn_norm.weight: torch.Size([1024])
+--- the layers in between have the same set of keys
+  mm_embeddings.vision_encoder.transformer.layers.23.attention.wk.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.23.attention.wo.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.23.attention.wq.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.23.attention.wv.weight: torch.Size([1024, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.23.attention_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_encoder.transformer.layers.23.feed_forward.w1.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.23.feed_forward.w2.weight: torch.Size([1024, 4096])
+  mm_embeddings.vision_encoder.transformer.layers.23.feed_forward.w3.weight: torch.Size([4096, 1024])
+  mm_embeddings.vision_encoder.transformer.layers.23.ffn_norm.weight: torch.Size([1024])
+  mm_embeddings.vision_language_projection.0.weight: torch.Size([5120, 1024])
+  mm_embeddings.vision_language_projection.2.weight: torch.Size([5120, 5120])

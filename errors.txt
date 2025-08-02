@@ -1,0 +1,78 @@
+/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/site-packages/mistral_common/tokens/tokenizers/tekken.py:337: FutureWarning: The attributed `special_token_policy` is deprecated and will be removed in 1.10.0. Please pass a special token policy explicitly to the relevant methods.
+  warnings.warn(
+[1;36m(VllmWorker rank=3 pid=1601002)[0;0m /mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/site-packages/mistral_common/tokens/tokenizers/tekken.py:337: FutureWarning: The attributed `special_token_policy` is deprecated and will be removed in 1.10.0. Please pass a special token policy explicitly to the relevant methods.
+[1;36m(VllmWorker rank=3 pid=1601002)[0;0m   warnings.warn(
+[1;36m(VllmWorker rank=0 pid=1600999)[0;0m /mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/site-packages/mistral_common/tokens/tokenizers/tekken.py:337: FutureWarning: The attributed `special_token_policy` is deprecated and will be removed in 1.10.0. Please pass a special token policy explicitly to the relevant methods.
+[1;36m(VllmWorker rank=0 pid=1600999)[0;0m   warnings.warn(
+[1;36m(VllmWorker rank=1 pid=1601000)[0;0m /mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/site-packages/mistral_common/tokens/tokenizers/tekken.py:337: FutureWarning: The attributed `special_token_policy` is deprecated and will be removed in 1.10.0. Please pass a special token policy explicitly to the relevant methods.
+[1;36m(VllmWorker rank=1 pid=1601000)[0;0m   warnings.warn(
+[1;36m(VllmWorker rank=2 pid=1601001)[0;0m /mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/site-packages/mistral_common/tokens/tokenizers/tekken.py:337: FutureWarning: The attributed `special_token_policy` is deprecated and will be removed in 1.10.0. Please pass a special token policy explicitly to the relevant methods.
+[1;36m(VllmWorker rank=2 pid=1601001)[0;0m   warnings.warn(
+[1;36m(VllmWorker rank=0 pid=1600999)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+[1;36m(VllmWorker rank=0 pid=1600999)[0;0m Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:04<00:00,  4.48s/it]
+[1;36m(VllmWorker rank=0 pid=1600999)[0;0m Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:04<00:00,  4.48s/it]
+[1;36m(VllmWorker rank=0 pid=1600999)[0;0m 
+Process EngineCore_0:
+Traceback (most recent call last):
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core.py", line 636, in run_engine_core
+    raise e
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core.py", line 623, in run_engine_core
+    engine_core = EngineCoreProc(*args, **kwargs)
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core.py", line 441, in __init__
+    super().__init__(vllm_config, executor_class, log_stats,
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core.py", line 86, in __init__
+    self._initialize_kv_caches(vllm_config)
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core.py", line 158, in _initialize_kv_caches
+    self.model_executor.determine_available_memory())
+  File "/mnt/vast/home/avi/vllm/vllm/v1/executor/abstract.py", line 76, in determine_available_memory
+    output = self.collective_rpc("determine_available_memory")
+  File "/mnt/vast/home/avi/vllm/vllm/v1/executor/multiproc_executor.py", line 237, in collective_rpc
+    result = get_response(w, dequeue_timeout)
+  File "/mnt/vast/home/avi/vllm/vllm/v1/executor/multiproc_executor.py", line 224, in get_response
+    raise RuntimeError(
+RuntimeError: Worker failed with error '', please check the stack trace above for the root cause
+Traceback (most recent call last):
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vast/home/avi/vllm/vllm/entrypoints/openai/api_server.py", line 1856, in <module>
+    uvloop.run(run_server(args))
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/site-packages/uvloop/__init__.py", line 82, in run
+    return loop.run_until_complete(wrapper())
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/site-packages/uvloop/__init__.py", line 61, in wrapper
+    return await main
+  File "/mnt/vast/home/avi/vllm/vllm/entrypoints/openai/api_server.py", line 1791, in run_server
+    await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+  File "/mnt/vast/home/avi/vllm/vllm/entrypoints/openai/api_server.py", line 1811, in run_server_worker
+    async with build_async_engine_client(args, client_config) as engine_client:
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/mnt/vast/home/avi/vllm/vllm/entrypoints/openai/api_server.py", line 158, in build_async_engine_client
+    async with build_async_engine_client_from_engine_args(
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/mnt/vast/home/avi/vllm/vllm/entrypoints/openai/api_server.py", line 194, in build_async_engine_client_from_engine_args
+    async_llm = AsyncLLM.from_vllm_config(
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/async_llm.py", line 163, in from_vllm_config
+    return cls(
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/async_llm.py", line 117, in __init__
+    self.engine_core = EngineCoreClient.make_async_mp_client(
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core_client.py", line 98, in make_async_mp_client
+    return AsyncMPClient(*client_args)
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core_client.py", line 677, in __init__
+    super().__init__(
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/core_client.py", line 408, in __init__
+    with launch_core_engines(vllm_config, executor_class,
+  File "/mnt/vast/home/avi/.conda/envs/vllm-omni/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/utils.py", line 697, in launch_core_engines
+    wait_for_engine_startup(
+  File "/mnt/vast/home/avi/vllm/vllm/v1/engine/utils.py", line 750, in wait_for_engine_startup
+    raise RuntimeError("Engine core initialization failed. "
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
